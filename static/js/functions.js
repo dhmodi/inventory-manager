@@ -29,7 +29,7 @@ $(document).ready(function() {
 			});
 	$.ajax({
 				type: "POST",
-				url: baseUrl + "query?v=20150910",
+				url: baseUrl + "query?v=20170712",
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
 				headers: {
@@ -105,7 +105,7 @@ console.log(voices);
 var recognition;
 nlp = window.nlp_compromise;
 var accessToken = "bc42b399e5a845df99644df738b1522c";
-var baseUrl = "https://api.api.ai/v1/";
+var baseUrl = "https://api.dialogflow.com/v1/";
 var messages = [], //array that hold the record of each string in chat
 lastUserMessage = "", //keeps track of the most recent input string from the user
 botMessage = "", //var keeps track of what the chatbot is going to say
