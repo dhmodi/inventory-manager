@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 from future.standard_library import install_aliases
+from flask_socketio import SocketIO, send, emit
 
 install_aliases()
 
@@ -33,27 +34,29 @@ import apiai
 
 # Flask app should start in global layout
 app = Flask(__name__, static_url_path='')
+socketio = SocketIO(app)
+
 parser = ""
 apimedic_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRobW9kaUBkZWxvaXR0ZS5jb20iLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjI5MSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvdmVyc2lvbiI6Ijk5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6Ijk5OTk5OTk5OSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IkJhc2ljIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9sYW5ndWFnZSI6ImVuLWdiIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9leHBpcmF0aW9uIjoiMjA5OS0xMi0zMSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcHN0YXJ0IjoiMjAwMC0wMS0wMSIsImlzcyI6Imh0dHBzOi8vYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTUwMzQwNzcwNSwibmJmIjoxNTAzNDAwNTA1fQ.OnZXAwtmhZmNAezcFdkZCTPMflbtIKIz5wm9FVyx_p0"
 
-url = urlparse("postgres://caedtehsggslri:4679ba0abec57484a1d7ed261b74e80b08391993433c77c838c58415087a9c34@ec2-107-20-255-96.compute-1.amazonaws.com:5432/d5tmi1ihm5f6hv")
-print (url.path[1:])
-conn = psycopg2.connect(
-    database=url.path[1:],
-    user=url.username,
-    password=url.password,
-    host=url.hostname,
-    port=url.port
-)
+# url = urlparse("postgres://caedtehsggslri:4679ba0abec57484a1d7ed261b74e80b08391993433c77c838c58415087a9c34@ec2-107-20-255-96.compute-1.amazonaws.com:5432/d5tmi1ihm5f6hv")
+# print (url.path[1:])
+# conn = psycopg2.connect(
+#     database=url.path[1:],
+#     user=url.username,
+#     password=url.password,
+#     host=url.hostname,
+#     port=url.port
+# )
 
-# @app.route('/')
-# def index():
-#     return redirect(url_for('static_url', filename='index.html'))
-
-
-@app.route('/speech')
-def speech():
+@app.route('/')
+def index():
     return redirect(url_for('static', filename='index.html'))
+
+
+# @app.route('/speech')
+# def speech():
+#     return redirect(url_for('static', filename='index.html'))
 
 # @app.route('/inventory')
 # def inventory():
@@ -289,6 +292,29 @@ def processRequest(req):
         # outText = ', '.join(str(x) for x in rows[0])
         outText = ', '.join(str(element).split(".")[0] for row in rows for element in row)
         # print(','.join(str(element) for row in rows for element in row))
+        return {
+            "speech": outText,
+            "displayText": outText,
+            # "data": data,
+            # "contextOut": [],
+            "source": "Dhaval"
+        }
+    elif (req.get("result").get("action") == "show.visualization"):
+        print("Inventory Visualization")
+        incoming_query = req.get("result").get("resolvedQuery")
+        queries = parser.parse_sentence(incoming_query.lower())
+        #print(query for query in queries)
+        queryString = ""
+        table = ""
+        for query in queries:
+            table = query.get_from().get_table()
+            queryString = queryString + str(query)
+        print(queryString)
+        # cur = conn.cursor()
+        # cur.execute(queryString)
+        # rows = cur.fetchall()
+        socketio.emit('some event', { "type": "line", "source": [{ "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ] })
+        outText = "Check it on right"
         return {
             "speech": outText,
             "displayText": outText,
@@ -577,4 +603,5 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
 
-    app.run(debug=True, port=port, host='0.0.0.0')
+    #app.run(debug=True, port=port, host='0.0.0.0')
+    socketio.run(app, debug=True, port=port, host='0.0.0.0')
