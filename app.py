@@ -313,6 +313,12 @@ def processRequest(req):
         cur = conn.cursor()
         cur.execute(queryString)
         rows = cur.fetchall()
+        print(rows)
+        for row in rows:
+            for element in row:
+                label = element[0]
+                value = element[1]
+                print(label, value)
         final_json = '[ { "type":"column2d", "chartcontainer":"barchart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"line", "chartcontainer":"linechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"pie2d", "chartcontainer":"piechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]} ]'
         socketio.emit('chartdata', final_json)
         outText = "Check it on right"

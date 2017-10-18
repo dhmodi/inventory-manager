@@ -20,8 +20,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="308" column="29" lean-forward="true" selection-start-line="308" selection-start-column="29" selection-end-line="308" selection-end-column="29" />
+            <state relative-caret-position="614">
+              <caret line="321" column="34" lean-forward="false" selection-start-line="321" selection-start-column="34" selection-end-line="321" selection-end-column="34" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -32,7 +32,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2269">
+            <state relative-caret-position="-1934">
               <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding />
             </state>
@@ -62,7 +62,7 @@
       <file leaf-file-name="fusioncharts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/fusioncharts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41322">
+            <state relative-caret-position="-40987">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -72,7 +72,7 @@
       <file leaf-file-name="fusioncharts.charts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/fusioncharts.charts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4992">
+            <state relative-caret-position="-4657">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -92,7 +92,7 @@
       <file leaf-file-name="inventory.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cognitiveSQL/database/inventory.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1491">
+            <state relative-caret-position="853">
               <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
               <folding />
             </state>
@@ -130,6 +130,8 @@
       <find>isd</find>
       <find>prima</find>
       <find>fusioncharts trial</find>
+      <find>fusioncharts</find>
+      <find>json</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -440,13 +442,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
-    </task>
-    <task id="LOCAL-00036" summary="d">
-      <created>1504521582372</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1504521582372</updated>
     </task>
     <task id="LOCAL-00037" summary="d">
       <created>1504521634600</created>
@@ -784,7 +779,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508321175108</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="d">
+      <created>1508321212971</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1508321212971</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1100,16 +1102,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cognitiveSQL/database/inventory.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
+        <state relative-caret-position="853">
           <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1122,25 +1116,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/index.html">
+    <entry file="file://$PROJECT_DIR$/static/js/fusioncharts.charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2269">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="-4657">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/fusioncharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41322">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/fusioncharts.charts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4992">
+        <state relative-caret-position="-40987">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1154,10 +1140,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1934">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="308" column="29" lean-forward="true" selection-start-line="308" selection-start-column="29" selection-end-line="308" selection-end-column="29" />
+        <state relative-caret-position="614">
+          <caret line="321" column="34" lean-forward="false" selection-start-line="321" selection-start-column="34" selection-end-line="321" selection-end-column="34" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
