@@ -13,6 +13,7 @@ from urllib.error import HTTPError
 import json
 import os
 import math
+import pandas as pd
 
 import sys
 sys.path.append('cognitiveSQL')
@@ -292,12 +293,14 @@ def processRequest(req):
         table = ""
         for query in queries:
             table = query.get_from().get_table()
+            columns = query.get_select().get_columns()
             queryString = queryString + str(query)
         print(queryString)
         cur = conn.cursor()
         cur.execute(queryString)
         rows = cur.fetchall()
         print(rows)
+        print (pd.DataFrame(list(rows), columns = columns))
         chartData = ''
         # for row in rows:
         #     label = str(row).split(",")[0]
