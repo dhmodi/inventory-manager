@@ -622,6 +622,7 @@ class Parser:
                  where_phrase = sum(from_phrases[last_junction_word_index+1:], []) + where_phrase
 
         real_tables_of_from = []
+        print ("Completed From")
 
         for word in from_phrase:
             if word in tables_of_from:
@@ -677,6 +678,8 @@ class Parser:
         group_by_parser = GroupByParser(group_by_phrase, tables_of_from, self.database_dico)
         order_by_parser = OrderByParser(order_by_phrase, tables_of_from, self.database_dico)
 
+        print ("All Parsing complete")
+
         select_parser.start()
         from_parser.start()
         where_parser.start()
@@ -693,11 +696,15 @@ class Parser:
         group_by_objects = group_by_parser.join()
         order_by_objects = order_by_parser.join()
 
+        print ("All Joins complete")
+
         for i in range(0, len(queries)):
             query = queries[i]
             query.set_select(select_objects[i])
             query.set_where(where_objects[i])
             query.set_group_by(group_by_objects[i])
             query.set_order_by(order_by_objects[i])
+
+        print (queries)
 
         return queries

@@ -303,6 +303,7 @@ def processRequest(req):
         print(list(columns))
         df = pd.DataFrame(list(rows), columns = ["label", "value"])
         agg_df = df.groupby(['label'], as_index=False).agg({"value": "sum"})
+        agg_df['label'] = agg_df['label'].astype('str')
         agg_df['value'] = agg_df['value'].astype('str')
         chartData = agg_df.to_json(orient='records')
         # chartData = [{"label": str(row[0]), "value": str(row[1])} for row in rows]
