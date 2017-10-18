@@ -300,6 +300,7 @@ def processRequest(req):
         cur.execute(queryString)
         rows = cur.fetchall()
         print(rows)
+        print(list(columns))
         print (pd.DataFrame(list(rows), columns = list(columns)))
         chartData = [{"label": str(row[0]), "value": str(row[1])} for row in rows]
         print (chartData)
