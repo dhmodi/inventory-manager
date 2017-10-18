@@ -317,6 +317,7 @@ def processRequest(req):
         print(rows)
         for row in rows:
             for element in row:
+                print(str(element))
                 label = str(element).split(".")[0]
                 value = str(element).split(".")[1]
                 print(label, value)

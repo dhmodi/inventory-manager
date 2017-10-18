@@ -20,8 +20,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="320" column="50" lean-forward="false" selection-start-line="320" selection-start-column="50" selection-end-line="320" selection-end-column="50" />
+            <state relative-caret-position="572">
+              <caret line="319" column="33" lean-forward="false" selection-start-line="319" selection-start-column="33" selection-end-line="319" selection-end-column="33" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -443,13 +443,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
     </task>
-    <task id="LOCAL-00041" summary="d">
-      <created>1504523169493</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1504523169493</updated>
-    </task>
     <task id="LOCAL-00042" summary="d">
       <created>1504523576070</created>
       <option name="number" value="00042" />
@@ -786,7 +779,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508322677383</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="d">
+      <created>1508323150220</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1508323150220</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1158,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="320" column="50" lean-forward="false" selection-start-line="320" selection-start-column="50" selection-end-line="320" selection-end-column="50" />
+        <state relative-caret-position="572">
+          <caret line="319" column="33" lean-forward="false" selection-start-line="319" selection-start-column="33" selection-end-line="319" selection-end-column="33" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
