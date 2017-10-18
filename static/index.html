@@ -35,7 +35,7 @@
 
 
 
-  <div class="container">
+  <div class="row">
       <div class="section">
 
         <!--   Icon Section   -->
@@ -49,11 +49,26 @@
             </div>
           </div> -->
 
-          <div class="col s12 md3">
+          <div class="col s12 md12">
             <div class="icon-block center">
+             
+                <div class="jumbotron ">
+                <div class="container-fluid" id="chartshow">
+                   <div class="row">
+                    <div  class="col-lg-6 float-left panelstyle" style="display:inline-block" id="barchart"></div>
+                     <div class="col-lg-6 float-right panelstyle" style="display:inline-block" id="linechart"></div>
+                   </div>
+                   <div class="row">
+                    <div class="col-lg-6 float-left panelstyle " style="display:inline-block" id="piechart"></div>
+                    <div class="col-lg-6 float-right panelstyle" style="display:inline-block" id="doughnut"></div>
+                  </div>
+                </div>
+                
+              </div>
+            
               <h2 class="center brown-text"><i class="material-icons">group</i>
               </h2>
-              <a class="waves-effect btn  waves-light color btn center " >Contact Us</a>
+             <a class="waves-effect btn  waves-light color btn center " >Contact Us</a>                   
               <div id="modal1"  class="modal fade slide-right">
                   <div class="modal-content  col s12 md2">
               <div class="row">
@@ -87,7 +102,7 @@
                               <div class="col s2 icon-container padding">
                                 <a id="rec" class="btn-floating center btncolour btn-large">
                                   <i class="material-icons small  ">mic</i></a></div>
-                                </a>
+                               
                             </div>
                           </div>
                           <a class="waves-effect margin-top waves-light btn">close</a>
@@ -105,11 +120,7 @@
       </div>
     </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-
+     
   <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
       <a id="modalopen" href="#modal1" class="btn-floating modal-trigger btn-large">
         <i class="material-icons ">headset_mic</i>
@@ -117,6 +128,7 @@
   </div>
 
   <footer class="page-footer background teal">
+
    </footer>
 
 
@@ -125,6 +137,8 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/functions.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <script  src="js/fusioncharts.js"></script>
+  <script  src="js/themes/fusioncharts.theme.fint.js"></script>
   </body>
 </html>

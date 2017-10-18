@@ -29,7 +29,7 @@ $(document).ready(function() {
 			});
 	$.ajax({
 				type: "POST",
-				url: baseUrl + "query?v=20170712",
+				url: baseUrl + "query?v=20150910",
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
 				headers: {
@@ -52,7 +52,7 @@ $(document).ready(function() {
  
 	$('#modalopen').click(function() {
 		$('.input-field .dropdown-content').on('mousewheel DOMMouseScroll' , function(e) { 
-		   console.log("scrolled");
+		  
 			e.stopPropagation() 
 		 });
 		 $('.input-field .dropdown-content li').scroll(function(e){
@@ -68,20 +68,86 @@ $(document).ready(function() {
       $(".grid-container .margin-top").click(function(){
 		$('#modal1').removeClass('slide-left');
 		$('#modal1').addClass('slide-right', 1000 ,'easeOutBounce'); 
-	  })
-   
-		});
+	  });
 
+	   //Socket io related code goes over here
+	   var socket = io.connect();
+	   socket.on('chartdata',function(data){
+		   var chartdetail = JSON.parse(data);
+		  
+		//    $.each("chartdetail",function(index , value){
+		// 	  console.log(value);
+		// 	     // CreateChart(value);
+		//    });
+		chartdetail.forEach(function(val , index, theArray){
+			
+			CreateChart(val);
+		});
+	
+		function CreateChart(data){
+			var chartdatum = data;			
+			FusionCharts.setCurrentRenderer('javascript');			
+			FusionCharts.ready(function () {
+			//	console.log(typeof chartdatum);	
+				var visitChart = new FusionCharts({
+					type: chartdatum.type,
+					renderer : 'javascript',
+					renderAt: chartdatum.chartcontainer,
+					width: '600',
+					height: '300',
+					dataFormat: 'json',
+					dataSource:{
+						"chart": {
+							"caption": "Website Visitors",
+							"subCaption": "Last week",
+							"xAxisName": "Day",
+							"yAxisName": "No. of Visitors",
+							"lineThickness" : "2",
+							"exportEnabled":'1',
+							"paletteColors" : "#009688",
+							"baseFontColor" : "#333333",
+							"baseFont" : "Helvetica Neue,Arial",
+							"captionFontSize" : "14",
+							"subcaptionFontSize" : "14",
+							"subcaptionFontBold" : "0",
+							"showBorder" : "0",
+							"bgColor" : "#ffffff",
+							"showShadow" : "0",
+							"canvasBgColor" : "#ffffff",
+							"canvasBorderAlpha" : "0",
+							"divlineAlpha" : "100",
+							"divlineColor" : "#999999",
+							"divlineThickness" : "1",
+							"divLineIsDashed" : "1",
+							"divLineDashLen" : "1",
+							"divLineGapLen" : "1",
+							"showXAxisLine" : "1",
+							"xAxisLineThickness" : "1",
+							"xAxisLineColor" : "#999999",
+							"showAlternateHGridColor" : "0"                
+						},
+						"data": chartdatum.source
+					}
+				});
+			console.log(visitChart);
+				visitChart.render();
+				$('#chartshow')[0].scrollIntoView(true);
+			});
+		
+		   
+	   }   
+		});
+		
+	});
 function loadVoices() {
 	// Fetch the available voices.
 	var voices = speechSynthesis.getVoices();
-	console.log("list to of voices ");
-console.log(voices);
+	
 	// Loop through each of the voices.
 	$('.input-field select').html("");
 	voices.forEach(function (voice, i) {
 		// Create a new option element.
-		console.log(voice);
+	
 		if(voice.lang == 'en-US'){
 
         $('.input-field select').append($('<option>', {
@@ -104,8 +170,8 @@ console.log(voices);
 
 var recognition;
 nlp = window.nlp_compromise;
-var accessToken = "bc42b399e5a845df99644df738b1522c";
-var baseUrl = "https://api.dialogflow.com/v1/";
+var accessToken = "872500f5983f46568df07d5ab0305eed";
+var baseUrl = "https://api.api.ai/v1/";
 var messages = [], //array that hold the record of each string in chat
 lastUserMessage = "", //keeps track of the most recent input string from the user
 botMessage = "", //var keeps track of what the chatbot is going to say
@@ -133,7 +199,7 @@ function startRecognition() {
 }
 
 function stopRecognition() {
-	console.log("stop recognition")
+	
 	if (recognition) {
 		recognition.stop();
 		recognition = null;
@@ -158,15 +224,14 @@ function setInput(text) {
 }
 
 function updateRec() {
-	console.log("inside of thie record");
-	console.log(recognition);
+
 	// $("#rec").text(recognition ? "Stop" : "Speak");
 	image_url = (recognition ? "mic" : "mic_off");
 	$("#rec .small")[0].innerText=image_url;
 }
 
 function send() {
-	console.log("finally send came");
+	
 	var text = lastUserMessage;
 	$.ajax({
 		type: "POST",
@@ -231,13 +296,12 @@ function setAudioResponse(val ,record) {
 			$.map(counter,function(data){				
               if(record == $(data)[0].innerHTML){
 				  utterThis.lang = $(data)[0].value;
-				 console.log("value is "+utterThis.lang);
+				 
 				  utterThis.name = $(data)[0].innerHTML;
 			  }
 			 
 			});
-			console.log(utterThis);
-         
+		
 			synth.speak(utterThis);
 		
 		}

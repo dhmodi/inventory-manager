@@ -38,7 +38,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 620px;
+  min-height: 440px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -70,6 +70,7 @@ p {
 
 footer.page-footer {
   margin: 0;
+  height:48px;
 }
 .modal-backdrop {
   display:none;
@@ -81,6 +82,7 @@ footer.page-footer {
 .rmargin{
  padding-right:0px !important;
  padding-left: 5px !important;
+ width:77% !important;
 
 }
 
@@ -94,7 +96,7 @@ footer.page-footer {
   left:auto;
   z-index: 10040;
   overflow: auto;
-  overflow-y: auto;
+  overflow-y:hidden;
 }
 .select-wrapper input.select-dropdown{
   height:2.1rem;
@@ -117,7 +119,7 @@ footer.page-footer {
 body {
   
   overflow-x: hidden;
-  overflow-y: scroll !important;
+  overflow-y: auto;
 }
 
 .precontainer{
@@ -131,6 +133,7 @@ body {
 .precontainer p{
   line-height: 1.2rem !important;
   margin:3px !important;
+  padding-left: 6px !important;
 }
 .precontainer .row{
   margin-bottom:0px;
@@ -146,7 +149,7 @@ body {
   padding-left:4px !important;
 }
 .left #palceholder{
-  left:1rem !important;
+  left:.50rem !important;
 }
 .slide-right{
   right:-510px;
@@ -173,10 +176,24 @@ h5 a{
 h5 a:hover{
   color:white;
 }
-/* .btncolour{
-  background-color:#03a9f4;
- 
+.rmargin .caret{
+  left: 336px;
 }
-.btncolour:hover{
-  background-color:#03a9f4; 
-} */
+#chartshow{
+  margin-top:20px;
+}
+.panelstyle{
+  margin-bottom: 0;
+  border-radius: 4px;
+  border-color: #929090;
+  background-color: #fff;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-sizing: border-box;
+}
+.chartcontainer{
+  background-color: gainsboro;
+  padding: 20px;
+  border-radius: 9px;
+  margin-top: 20px;
+}
