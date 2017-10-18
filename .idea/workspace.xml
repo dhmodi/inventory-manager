@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f0e5c92-6b92-470d-8d1d-90b7b76ef1d2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/LICENSE" afterPath="$PROJECT_DIR$/static/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/index.html" afterPath="$PROJECT_DIR$/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/functions.js" afterPath="$PROJECT_DIR$/static/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/init.js" afterPath="$PROJECT_DIR$/static/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/materialize.js" afterPath="$PROJECT_DIR$/static/js/materialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/materialize.min.js" afterPath="$PROJECT_DIR$/static/js/materialize.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -426,13 +419,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
     </task>
-    <task id="LOCAL-00027" summary="database integration">
-      <created>1503394712186</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1503394712186</updated>
-    </task>
     <task id="LOCAL-00028" summary="d">
       <created>1503394849069</created>
       <option name="number" value="00028" />
@@ -769,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508155665106</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="d">
+      <created>1508315181886</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1508315181891</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
