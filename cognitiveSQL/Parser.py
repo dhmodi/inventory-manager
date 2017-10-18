@@ -548,6 +548,7 @@ class Parser:
         return u"".join([c for c in nkfd_form if not unicodedata.combining(c)])
 
     def parse_sentence(self, sentence):
+        print("Inside parse sentence - " + sentence)
         number_of_table = 0
         number_of_select_column = 0
         number_of_where_column = 0
@@ -584,7 +585,9 @@ class Parser:
                         from_phrase = words[len(select_phrase):]
 
         where_phrase = words[len(select_phrase) + len(from_phrase):]
-        
+
+        print ("Completed Where")
+
         if (number_of_select_column + number_of_table + number_of_where_column) == 0:
             raise ParsingException("No keyword found in sentence!")
 
