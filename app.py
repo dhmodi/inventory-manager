@@ -302,6 +302,7 @@ def processRequest(req):
     elif (req.get("result").get("action") == "show.visualization"):
         print("Inventory Visualization")
         incoming_query = req.get("result").get("resolvedQuery")
+        chartType = req.get("result").get("parameters").get("chart-type")
         queries = parser.parse_sentence(incoming_query.lower())
         #print(query for query in queries)
         queryString = ""
@@ -319,7 +320,7 @@ def processRequest(req):
                 label = str(element[0])
                 value = str(element[1])
                 print(label, value)
-        final_json = '[ { "type":"column2d", "chartcontainer":"barchart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"line", "chartcontainer":"linechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"pie2d", "chartcontainer":"piechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]} ]'
+        final_json = '[ { "type":' + chartType + ', "chartcontainer":"barchart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"line", "chartcontainer":"linechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"pie2d", "chartcontainer":"piechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]} ]'
         socketio.emit('chartdata', final_json)
         outText = "Check it on right"
         return {
