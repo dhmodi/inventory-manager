@@ -302,9 +302,9 @@ def processRequest(req):
         print(rows)
         print(list(columns))
         df = pd.DataFrame(list(rows), columns = ["label", "value"])
-        print(df.groupby(['label']).sum())
-        df['value'] = df['value'].astype('str')
-        chartData = df.to_json(orient='records')
+        agg_df = df.groupby(['label']).sum()
+        agg_df['value'] = agg_df['value'].astype('str')
+        chartData = agg_df.to_json(orient='records')
         # chartData = [{"label": str(row[0]), "value": str(row[1])} for row in rows]
         print (chartData)
         # chartData = json.dumps(chartData)
