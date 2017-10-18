@@ -29,7 +29,7 @@ $(document).ready(function() {
 			});
 	$.ajax({
 				type: "POST",
-				url: baseUrl + "query?v=20150910",
+				url: baseUrl + "query?v=20170712",
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
 				headers: {
@@ -71,7 +71,7 @@ $(document).ready(function() {
 	  });
 
 	   //Socket io related code goes over here
-	   var socket = io.connect();
+	   var socket = io.connect('https://deloitte-inventory-manager.herokuapp.com');
 	   socket.on('chartdata',function(data){
 		   var chartdetail = JSON.parse(data);
 		  
@@ -170,8 +170,8 @@ function loadVoices() {
 
 var recognition;
 nlp = window.nlp_compromise;
-var accessToken = "872500f5983f46568df07d5ab0305eed";
-var baseUrl = "https://api.api.ai/v1/";
+var accessToken = "bc42b399e5a845df99644df738b1522c";
+var baseUrl = "https://api.dialogflow.com/v1/";
 var messages = [], //array that hold the record of each string in chat
 lastUserMessage = "", //keeps track of the most recent input string from the user
 botMessage = "", //var keeps track of what the chatbot is going to say
