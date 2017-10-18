@@ -301,15 +301,15 @@ def processRequest(req):
         }
     elif (req.get("result").get("action") == "show.visualization"):
         print("Inventory Visualization")
-        incoming_query = req.get("result").get("resolvedQuery")
-        queries = parser.parse_sentence(incoming_query.lower())
-        #print(query for query in queries)
-        queryString = ""
-        table = ""
-        for query in queries:
-            table = query.get_from().get_table()
-            queryString = queryString + str(query)
-        print(queryString)
+        # incoming_query = req.get("result").get("resolvedQuery")
+        # queries = parser.parse_sentence(incoming_query.lower())
+        # #print(query for query in queries)
+        # queryString = ""
+        # table = ""
+        # for query in queries:
+        #     table = query.get_from().get_table()
+        #     queryString = queryString + str(query)
+        # print(queryString)
         # cur = conn.cursor()
         # cur.execute(queryString)
         # rows = cur.fetchall()
