@@ -302,9 +302,11 @@ def processRequest(req):
     elif (req.get("result").get("action") == "show.visualization"):
         print("Inventory Visualization")
         incoming_query = req.get("result").get("resolvedQuery")
+        print(incoming_query)
         chartType = req.get("result").get("parameters").get("chart-type")
+        print(chartType)
         queries = parser.parse_sentence(incoming_query.lower())
-        #print(query for query in queries)
+        print(query for query in queries)
         queryString = ""
         table = ""
         for query in queries:
