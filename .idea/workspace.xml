@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f0e5c92-6b92-470d-8d1d-90b7b76ef1d2" name="Default" comment="d">
+    <list default="true" id="1f0e5c92-6b92-470d-8d1d-90b7b76ef1d2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="302" column="59" lean-forward="false" selection-start-line="302" selection-start-column="59" selection-end-line="302" selection-end-column="59" />
+            <state relative-caret-position="-5954">
+              <caret line="82" column="10" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -464,13 +463,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
     </task>
-    <task id="LOCAL-00051" summary="d">
-      <created>1504535820342</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1504535820342</updated>
-    </task>
     <task id="LOCAL-00052" summary="d">
       <created>1504536049391</created>
       <option name="number" value="00052" />
@@ -807,7 +799,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508328142502</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="d">
+      <created>1508329929939</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1508329929939</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1182,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="302" column="59" lean-forward="false" selection-start-line="302" selection-start-column="59" selection-end-line="302" selection-end-column="59" />
+        <state relative-caret-position="-5954">
+          <caret line="82" column="10" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
