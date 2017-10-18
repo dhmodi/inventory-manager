@@ -258,25 +258,6 @@ def processRequest(req):
         }
     elif (req.get("result").get("action") == "inventory.search"):
         print("Inventory Search")
-        # parameters = req.get("result").get("parameters")
-        # table = parameters.get("tables")
-        # print(table)
-        # attribute = parameters.get("attribute")
-        # operation = parameters.get("operation")
-        # print(operation)
-        # if ((operation[0] is not None) and (operation[0] == "count")):
-        #     cur = conn.cursor()
-        #     cur.execute("select count(*) from " + table[0])
-        #     rows = cur.fetchall()
-        #     print(rows[0])
-        #     outText = "There are " + str(rows[0][0]) + " number of " + str(table[0]) + "s"
-        #     return {
-        #         "speech": outText,
-        #         "displayText": outText,
-        #         # "data": data,
-        #         # "contextOut": [],
-        #         "source": "Dhaval"
-        #     }
         incoming_query = req.get("result").get("resolvedQuery")
         queries = parser.parse_sentence(incoming_query.lower())
         #print(query for query in queries)
@@ -318,11 +299,11 @@ def processRequest(req):
         rows = cur.fetchall()
         print(rows)
         for row in rows:
-            print(str(row))
             label = str(row).split(",")[0]
             value = str(row).split(",")[1]
             print(label, value)
-        final_json = '[ { "type":' + chartType + ', "chartcontainer":"barchart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"line", "chartcontainer":"linechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"pie2d", "chartcontainer":"piechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]} ]'
+        final_json = '[ { "type":"' + chartType + '", "chartcontainer":"barchart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"line", "chartcontainer":"linechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}, { "type":"pie2d", "chartcontainer":"piechart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]} ]'
+        print(final_json)
         socketio.emit('chartdata', final_json)
         outText = "Check it on right"
         return {
