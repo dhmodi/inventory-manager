@@ -20,8 +20,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="309" column="50" lean-forward="true" selection-start-line="309" selection-start-column="50" selection-end-line="309" selection-end-column="50" />
+            <state relative-caret-position="423">
+              <caret line="316" column="45" lean-forward="false" selection-start-line="316" selection-start-column="45" selection-end-line="316" selection-end-column="45" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -440,13 +440,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
     </task>
-    <task id="LOCAL-00033" summary="d">
-      <created>1504521085087</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1504521085087</updated>
-    </task>
     <task id="LOCAL-00034" summary="d">
       <created>1504521259263</created>
       <option name="number" value="00034" />
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508320183853</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="d">
+      <created>1508320402362</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1508320402362</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1155,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="309" column="50" lean-forward="true" selection-start-line="309" selection-start-column="50" selection-end-line="309" selection-end-column="50" />
+        <state relative-caret-position="423">
+          <caret line="316" column="45" lean-forward="false" selection-start-line="316" selection-start-column="45" selection-end-line="316" selection-end-column="45" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
