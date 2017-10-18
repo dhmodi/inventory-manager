@@ -300,13 +300,7 @@ def processRequest(req):
         cur.execute(queryString)
         rows = cur.fetchall()
         print(rows)
-        print (pd.DataFrame(list(rows), columns = columns))
-        chartData = ''
-        # for row in rows:
-        #     label = str(row).split(",")[0]
-        #     value = str(row).split(",")[1]
-        #     print(label, value)
-        #     chartData = chartData + '{ "label": "' + label + '", "value": "' + value + '"}'
+        print (pd.DataFrame(list(rows), columns = list(columns)))
         chartData = [{"label": str(row[0]), "value": str(row[1])} for row in rows]
         print (chartData)
         chartData = json.dumps(chartData)
