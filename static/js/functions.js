@@ -74,34 +74,43 @@ $(document).ready(function() {
 	   var socket = io.connect('https://deloitte-inventory-manager.herokuapp.com');
 	   socket.on('chartdata',function(data){
 		   var chartdetail = JSON.parse(data);
+		   var length = chartdetail.length;
+		   var width = 600;
+		   var height=300;
+		   var chartdetail ;
 		  
 		//    $.each("chartdetail",function(index , value){
 		// 	  console.log(value);
 		// 	     // CreateChart(value);
 		//    });
-		chartdetail.forEach(function(val , index, theArray){
-			
+		chartdetail.forEach(function(val , index, theArray){				
 			CreateChart(val);
+			status = true;
 		});
 	
 		function CreateChart(data){
-			var chartdatum = data;			
+			var chartdatum = data;	
+			//  if(length == 1){
+			// 	   width = 900;
+			// 	   height= 500;
+			//  }		
 			FusionCharts.setCurrentRenderer('javascript');			
 			FusionCharts.ready(function () {
 			//	console.log(typeof chartdatum);	
 				var visitChart = new FusionCharts({
 					type: chartdatum.type,
+					id:chartdatum.chartcontainer+"-",
 					renderer : 'javascript',
 					renderAt: chartdatum.chartcontainer,
-					width: '600',
-					height: '300',
+					width: "620",
+					height: "300",
 					dataFormat: 'json',
 					dataSource:{
 						"chart": {
-							"caption": "Website Visitors",
-							"subCaption": "Last week",
-							"xAxisName": "Day",
-							"yAxisName": "No. of Visitors",
+							"caption": chartdatum.caption,
+							"subCaption": chartdatum.subCaption,
+							"xAxisName": chartdatum.xAxisName,
+							"yAxisName": chartdatum.yAxisName,
 							"lineThickness" : "2",
 							"exportEnabled":'1',
 							"paletteColors" : "#009688",
@@ -129,13 +138,17 @@ $(document).ready(function() {
 						"data": chartdatum.source
 					}
 				});
+			//	var chartObject= FusionCharts(chartdatum.id);
+			//chartdetail.push( visitChart.getData());
 			console.log(visitChart);
 				visitChart.render();
 				$('#chartshow')[0].scrollIntoView(true);
 			});
 		
 		   
-	   }   
+	   }
+	   $(".panel-heading").css("display","inline-block");  
+	 //  console.log(chartdetail); 
 		});
 		
 	});
@@ -235,7 +248,7 @@ function send() {
 	var text = lastUserMessage;
 	$.ajax({
 		type: "POST",
-		url: baseUrl + "query?v=20150910",
+		url: baseUrl + "query?v=20170712",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
