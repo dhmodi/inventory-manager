@@ -13,6 +13,10 @@ nav .brand-logo {
 .dropdown-content li > span{
   color:black;
 }
+
+.panel-heading{
+  display: none;
+}
 .minheight{
   height: 200px;
  }
@@ -27,7 +31,7 @@ nav .brand-logo {
   background-image: 'deloitte.jpg'
 }
  .color{
-  background-color:#0e5fd8 !important;
+  background-color:#26a69a !important;
  }
 p {
   line-height: 2rem;
@@ -38,7 +42,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 440px;
+  min-height: 600px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
