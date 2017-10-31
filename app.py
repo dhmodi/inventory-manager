@@ -301,6 +301,8 @@ def processRequest(req):
         rows = cur.fetchall()
         print(rows)
         print(list(columns))
+        xAxis = columns[0]
+        yAxis = columns[1]
         df = pd.DataFrame(list(rows), columns = ["label", "value"])
         agg_df = df.groupby(['label'], as_index=False).agg({"value": "sum"})
         agg_df['label'] = agg_df['label'].astype('str')
@@ -309,8 +311,8 @@ def processRequest(req):
         # chartData = [{"label": str(row[0]), "value": str(row[1])} for row in rows]
         print (chartData)
         # chartData = json.dumps(chartData)
-        # final_json = '[ { "type":"' + chartType + '", "chartcontainer":"barchart", "source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}]'
-        final_json = '[ { "type":"' + chartType + '", "chartcontainer":"barchart", "source":' + chartData + '}]'
+        # final_json = '[ { "type":"' + chartType + '", "chartcontainer":"barchart", "caption":"' + chartType + ' chart showing ' + xAxis + ' vs ' + yAxis + '", "subCaption":"", "xAxisName":"xAxis", "yAxisName":"yAxis","source":[ { "label": "Mon", "value": "15123" }, { "label": "Tue", "value": "14233" }, { "label": "Wed", "value": "23507" }, { "label": "Thu", "value": "9110" }, { "label": "Fri", "value": "15529" }, { "label": "Sat", "value": "20803" }, { "label": "Sun", "value": "19202" } ]}]'
+        final_json = '[ { "type":"' + chartType + '", "chartcontainer":"barchart", "caption":"' + chartType + ' chart showing ' + xAxis + ' vs ' + yAxis + '", "subCaption":"", "xAxisName":"xAxis", "yAxisName":"yAxis", "source":' + chartData + '}]'
         print(final_json)
         socketio.emit('chartdata', final_json)
         outText = "Check it on right"
