@@ -301,8 +301,9 @@ def processRequest(req):
         rows = cur.fetchall()
         print(rows)
         print(list(columns))
-        xAxis = columns[0]
-        yAxis = columns[1]
+        xAxis = columns[0][0].split('.')[0]
+        yAxis = columns[1][0].split('.')[0]
+        print(xAxis)
         df = pd.DataFrame(list(rows), columns = ["label", "value"])
         agg_df = df.groupby(['label'], as_index=False).agg({"value": "sum"})
         agg_df['label'] = agg_df['label'].astype('str')
