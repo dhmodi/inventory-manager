@@ -291,9 +291,12 @@ def processRequest(req):
         # outText = ', '.join(str(x) for x in rows[0])
         # outText = ', '.join(str(element).split(".")[0] for row in rows for element in row)
         count = 0
+
         outText = "The "
         for row in rows:
+            isLast = len(row)
             for element in row:
+                isLast = isLast - 1
                 value = str(element).split(".")[0]
                 column = columns[count][0].split('.')[1]
                 operation = columns[count][1]
@@ -301,6 +304,9 @@ def processRequest(req):
                     outText = outText + operation + " of " + column + " is " + value + " "
                 else:
                     outText = outText + operation + " of " + table + " is " + value
+                if (isLast is not 0):
+                    outText = outText + " and the "
+                count = count + 1
         # print(','.join(str(element) for row in rows for element in row))
 
         return {
