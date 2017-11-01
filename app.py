@@ -296,7 +296,11 @@ def processRequest(req):
             for element in row:
                 value = str(element).split(".")[0]
                 column = columns[count][0].split('.')[1]
-                outText = outText + column + " is " + value + " "
+                operation = columns[count][1]
+                if operation is not "COUNT":
+                    outText = outText + operation + " of " + column + " is " + value + " "
+                else:
+                    outText = outText + operation + " of " + table + " is " + value
         # print(','.join(str(element) for row in rows for element in row))
 
         return {
