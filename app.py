@@ -244,12 +244,22 @@ def processRequest(req):
         table = ""
         for query in queries:
             table = query.get_from().get_table()
+            columns = query.get_select().get_columns()
             queryString = queryString + str(query)
         print(queryString)
         cur = conn.cursor()
         cur.execute(queryString)
         rows = cur.fetchall()
-        outText = str(rows[0][0])
+        # outText = ', '.join(str(x) for x in rows[0])
+        # outText = ', '.join(str(element).split(".")[0] for row in rows for element in row)
+        count = 0
+        outText = "The "
+        for row in rows:
+            for element in row:
+                value = str(element).split(".")[0]
+                column = columns[count][0].split('.')[1]
+                outText = outText + column + " is " + value + " "
+        # outText = str(rows[0][0])
         return {
             "speech": outText,
             "displayText": outText,
@@ -266,14 +276,29 @@ def processRequest(req):
         table = ""
         for query in queries:
             table = query.get_from().get_table()
+            columns = query.get_select().get_columns()
             queryString = queryString + str(query)
+
+        print(table)
+        print(list(columns))
+        # xAxis = columns[0][0].split('.')[1]
+        # yAxis = columns[1][0].split('.')[1]
         print(queryString)
         cur = conn.cursor()
         cur.execute(queryString)
         rows = cur.fetchall()
+
         # outText = ', '.join(str(x) for x in rows[0])
-        outText = ', '.join(str(element).split(".")[0] for row in rows for element in row)
+        # outText = ', '.join(str(element).split(".")[0] for row in rows for element in row)
+        count = 0
+        outText = "The "
+        for row in rows:
+            for element in row:
+                value = str(element).split(".")[0]
+                column = columns[count][0].split('.')[1]
+                outText = outText + column + " is " + value + " "
         # print(','.join(str(element) for row in rows for element in row))
+
         return {
             "speech": outText,
             "displayText": outText,
