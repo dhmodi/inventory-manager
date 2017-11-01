@@ -300,9 +300,9 @@ def processRequest(req):
                 value = str(element).split(".")[0]
                 column = columns[count][0].split('.')[1]
                 operation = columns[count][1]
-                if operation is not "COUNT":
+                if (operation is not "COUNT"):
                     outText = outText + operation + " of " + column + " is " + value
-                elif:
+                elif (operation is None) :
                     outText = outText + column + " is " + value
                 else:
                     outText = outText + operation + " of " + table + " is " + value
