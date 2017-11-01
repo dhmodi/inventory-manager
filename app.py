@@ -302,6 +302,8 @@ def processRequest(req):
                 operation = columns[count][1]
                 if operation is not "COUNT":
                     outText = outText + operation + " of " + column + " is " + value + " "
+                elif:
+                    outText = outText + column + " is " + value + " "
                 else:
                     outText = outText + operation + " of " + table + " is " + value
                 if (isLast is not 0):
