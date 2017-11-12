@@ -298,6 +298,7 @@ def processRequest(req):
             for element in row:
                 isLast = isLast - 1
                 value = str(element).split(".")[0]
+                print(columns)
                 column = columns[count][0].split('.')[1]
                 operation = columns[count][1]
                 if (operation is None):
