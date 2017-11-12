@@ -55,8 +55,8 @@ CREATE TABLE `inventory`` (
     `cycle_stock`   DOUBLE            NOT NULL,
     `usd_transit_stock`   DOUBLE            NOT NULL,
     `transit_stock`   DOUBLE            NOT NULL,
-    `usd_excess`   DOUBLE            NOT NULL,
-    `excess`   DOUBLE            NOT NULL,
+    `usd_surplus`   DOUBLE            NOT NULL,
+    `surplus`   DOUBLE            NOT NULL,
     PRIMARY KEY (`sku`)
 );
 
