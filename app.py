@@ -298,18 +298,19 @@ def processRequest(req):
             for element in row:
                 isLast = isLast - 1
                 value = str(element).split(".")[0]
-                print(columns)
-                column = columns[count][0].split('.')[1]
-                operation = columns[count][1]
-                if (operation is None):
-                    print("The Operation is None")
-                    outText = outText + column + " is " + value
-                elif (operation is "COUNT"):
-                    print("The Operation is " + str(operation))
-                    outText = outText + operation + " of " + table + " is " + value
-                else:
-                    print("The Operation is " + str(operation))
-                    outText = outText + operation + " of " + column + " is " + value
+                if (columns is not None):
+                    print(columns)
+                    column = columns[count][0].split('.')[1]
+                    operation = columns[count][1]
+                    if (operation is None):
+                        print("The Operation is None")
+                        outText = outText + column + " is " + value
+                    elif (operation is "COUNT"):
+                        print("The Operation is " + str(operation))
+                        outText = outText + operation + " of " + table + " is " + value
+                    else:
+                        print("The Operation is " + str(operation))
+                        outText = outText + operation + " of " + column + " is " + value
                 if (isLast is not 0):
                     outText = outText + " and the "
                 count = count + 1
