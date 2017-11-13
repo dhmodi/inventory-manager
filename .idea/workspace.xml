@@ -71,8 +71,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="351" column="55" lean-forward="true" selection-start-line="351" selection-start-column="55" selection-end-line="351" selection-end-column="55" />
+            <state relative-caret-position="661">
+              <caret line="364" column="165" lean-forward="false" selection-start-line="364" selection-start-column="165" selection-end-line="364" selection-end-column="165" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -426,13 +426,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
     </task>
-    <task id="LOCAL-00087" summary="d">
-      <created>1508322119496</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1508322119496</updated>
-    </task>
     <task id="LOCAL-00088" summary="d">
       <created>1508322263654</created>
       <option name="number" value="00088" />
@@ -769,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510545068317</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="d">
+      <created>1510545258117</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1510545258117</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1131,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="351" column="55" lean-forward="true" selection-start-line="351" selection-start-column="55" selection-end-line="351" selection-end-column="55" />
+        <state relative-caret-position="661">
+          <caret line="364" column="165" lean-forward="false" selection-start-line="364" selection-start-column="165" selection-end-line="364" selection-end-column="165" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
