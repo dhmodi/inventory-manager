@@ -311,9 +311,9 @@ def processRequest(req):
                 else:
                     print("The Operation is " + str(operation))
                     outText = outText + operation + " of " + column + " is " + value
-            if (isLast is not 0):
-                    outText = outText + " and the "
-                count = count + 1
+                if (isLast is not 0):
+                        outText = outText + " and the "
+                    count = count + 1
         # print(','.join(str(element) for row in rows for element in row))
 
         return {
