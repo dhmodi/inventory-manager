@@ -71,11 +71,21 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="314" column="51" lean-forward="true" selection-start-line="314" selection-start-column="51" selection-end-line="314" selection-end-column="51" />
+            <state relative-caret-position="598">
+              <caret line="361" column="68" lean-forward="true" selection-start-line="361" selection-start-column="68" selection-end-line="361" selection-end-column="68" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,34 +202,6 @@
             <path>
               <item name="inventory_manager_v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventory_manager_v2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_manager_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_manager_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="cognitiveSQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_manager_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_manager_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="cognitiveSQL" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_manager_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_manager_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_manager_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_manager_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_manager_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_manager_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -443,13 +425,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
-    </task>
-    <task id="LOCAL-00085" summary="d">
-      <created>1508321212971</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1508321212971</updated>
     </task>
     <task id="LOCAL-00086" summary="d">
       <created>1508321903514</created>
@@ -787,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510543557928</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="d">
+      <created>1510543756893</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1510543756893</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -954,13 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1146,10 +1121,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="314" column="51" lean-forward="true" selection-start-line="314" selection-start-column="51" selection-end-line="314" selection-end-column="51" />
+        <state relative-caret-position="598">
+          <caret line="361" column="68" lean-forward="true" selection-start-line="361" selection-start-column="68" selection-end-line="361" selection-end-column="68" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
