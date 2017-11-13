@@ -302,10 +302,12 @@ def processRequest(req):
                 column = columns[count][0].split('.')[1]
                 operation = columns[count][1]
                 if (operation is None):
+                    print("The Operation is None" + operation)
                     outText = outText + column + " is " + value
                 elif (operation is "COUNT"):
                     outText = outText + operation + " of " + table + " is " + value
                 else:
+                    print("The Operation is " + operation)
                     outText = outText + operation + " of " + column + " is " + value
                 if (isLast is not 0):
                     outText = outText + " and the "
