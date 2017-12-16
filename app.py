@@ -75,7 +75,7 @@ def webhook():
     res = json.dumps(res, indent=4)
     print(res)
     r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
+    r.headers['Content-Type'] = 'application/json;charset=UTF-8'
     return r
 
 
@@ -246,8 +246,8 @@ def processRequest(req):
         with open("response/alexa_response.json", 'r') as f:
             alexaResponse = json.load(f)
 
-        alexaResponse["response"]["outputSpeech"]["text"] = outText
-        alexaResponse["response"]["reprompt"]["outputSpeech"]["text"] = outText
+        # alexaResponse["response"]["outputSpeech"]["text"] = outText
+        # alexaResponse["response"]["reprompt"]["outputSpeech"]["text"] = outText
         return alexaResponse
 
 if __name__ == '__main__':
