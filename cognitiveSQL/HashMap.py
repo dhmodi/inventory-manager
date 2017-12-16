@@ -1,5 +1,7 @@
+import nltk
 from nltk import ngrams
 from nltk.tokenize import word_tokenize
+nltk.data.path.append('cognitiveSQL\nltk')
 
 def hashMap_columns(sentence, hashColumn_csv):
     ngrams2 = ngrams(sentence.split(), 2)
