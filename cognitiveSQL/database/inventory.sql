@@ -38,7 +38,7 @@ DROP TABLE IF EXISTS dept_emp,
 /*!50503 set default_storage_engine = InnoDB */;
 /*!50503 select CONCAT('storage engine: ', @@default_storage_engine) as INFO */;
 
-CREATE TABLE `inventory`` (
+CREATE TABLE `inventory` (
     `sku`      INT             NOT NULL,
     `calendar_Day`  DATE            NOT NULL,
     `category`  VARCHAR(14)     NOT NULL,
