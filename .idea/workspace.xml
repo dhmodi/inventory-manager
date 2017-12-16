@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f0e5c92-6b92-470d-8d1d-90b7b76ef1d2" name="Default" comment="d">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/czech.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/danish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/dutch.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/english.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/estonian.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/finnish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/french.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/german.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/greek.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/italian.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/norwegian.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/polish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/portuguese.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/slovene.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/spanish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/swedish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/PY3/turkish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/czech.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/danish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/dutch.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/english.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/estonian.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/finnish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/french.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/german.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/greek.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/italian.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/norwegian.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/polish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/portuguese.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/slovene.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/spanish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/swedish.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cognitiveSQL/ntlk/punkt/turkish.pickle" afterPath="" />
+    <list default="true" id="1f0e5c92-6b92-470d-8d1d-90b7b76ef1d2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cognitiveSQL/Parser.py" afterPath="$PROJECT_DIR$/cognitiveSQL/Parser.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +30,7 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1068">
+            <state relative-caret-position="-1003">
               <caret line="201" column="28" lean-forward="false" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
@@ -104,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cognitiveSQL/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
-              <caret line="567" column="26" lean-forward="false" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="26" />
+              <caret line="567" column="32" lean-forward="false" selection-start-line="567" selection-start-column="32" selection-end-line="567" selection-end-column="32" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -119,7 +84,7 @@
       <file leaf-file-name="HashMap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cognitiveSQL/HashMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="96">
               <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -128,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nltk.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nltk.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nltk.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -221,8 +186,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/nltk.txt" />
-        <option value="$PROJECT_DIR$/cognitiveSQL/Parser.py" />
         <option value="$PROJECT_DIR$/cognitiveSQL/HashMap.py" />
+        <option value="$PROJECT_DIR$/cognitiveSQL/Parser.py" />
       </list>
     </option>
   </component>
@@ -507,13 +472,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499410689410</updated>
-    </task>
-    <task id="LOCAL-00095" summary="d">
-      <created>1508326806043</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1508326806043</updated>
     </task>
     <task id="LOCAL-00096" summary="d">
       <created>1508327378045</created>
@@ -851,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513426138007</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="d">
+      <created>1513426682645</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1513426682645</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1210,36 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1068">
-          <caret line="201" column="28" lean-forward="false" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
-          <folding>
-            <element signature="e#23#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cognitiveSQL/Parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="567" column="26" lean-forward="false" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cognitiveSQL/HashMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cognitiveSQL/alias/synonyms.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1253,6 +1188,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="201" column="28" lean-forward="false" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cognitiveSQL/HashMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cognitiveSQL/Parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="567" column="32" lean-forward="false" selection-start-line="567" selection-start-column="32" selection-end-line="567" selection-end-column="32" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
