@@ -188,7 +188,7 @@ def processRequest(req):
         print("InventorySearch")
         incoming_query = req.get("request").get("intent").get("slots").get("message").get("value")
         print(incoming_query)
-        queries = parser.parse_sentence(incoming_query.lower())
+        queries = parser.parse_sentence(str(incoming_query).lower())
         # queries = parser.parse_sentence(incoming_query)
         # print(query for query in queries)
         queryString = ""
