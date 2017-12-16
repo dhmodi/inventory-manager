@@ -210,30 +210,30 @@ def processRequest(req):
         count = 0
 
         outText = "The "
-        # for row in rows:
-        #     isLast = len(row)
-        #     for element in row:
-        #         isLast = isLast - 1
-        #         value = str(element).split(".")[0]
-        #         if (columns[count][0] is not None):
-        #             # print(columns)
-        #             column = columns[count][0].split('.')[1]
-        #         operation = columns[count][1]
-        #         if (operation is None):
-        #             print("The Operation is None")
-        #             outText = outText + column + " is " + value
-        #         elif (operation is "COUNT"):
-        #             print("The Operation is " + str(operation))
-        #             outText = outText + operation + " of " + table + " is " + value
-        #         else:
-        #             print("The Operation is " + str(operation))
-        #             outText = outText + operation + " of " + column + " is " + value
-        #         if (isLast is not 0):
-        #             outText = outText + " and the "
-        #             count = count + 1
-        # print(','.join(str(element) for row in rows for element in row))
+        for row in rows:
+            isLast = len(row)
+            for element in row:
+                isLast = isLast - 1
+                value = str(element).split(".")[0]
+                if (columns[count][0] is not None):
+                    # print(columns)
+                    column = columns[count][0].split('.')[1]
+                operation = columns[count][1]
+                if (operation is None):
+                    print("The Operation is None")
+                    outText = outText + column + " is " + value
+                elif (operation is "COUNT"):
+                    print("The Operation is " + str(operation))
+                    outText = outText + operation + " of " + table + " is " + value
+                else:
+                    print("The Operation is " + str(operation))
+                    outText = outText + operation + " of " + column + " is " + value
+                if (isLast is not 0):
+                    outText = outText + " and the "
+                    count = count + 1
+        #print(','.join(str(element) for row in rows for element in row))
 
-        # print(','.join(str(element) for row in rows for element in row))
+
         # return {
         #     "speech": type,
         #     "displayText": outText,
@@ -244,11 +244,11 @@ def processRequest(req):
 
         # alexaResponse.get("response").get("outputSpeech").get("text")=outText
         # alexaResponse.get("response").get("reprompt").get("outputSpeech").get("text")=outText
+        print(outText)
         with open("response/alexa_response.json", 'r') as f:
             alexaResponse = json.load(f)
 
-        # alexaResponse["response"]["outputSpeech"]["text"] = outText
-        # alexaResponse["response"]["reprompt"]["outputSpeech"]["text"] = outText
+        alexaResponse["response"]["outputSpeech"]["text"] = outText
         return alexaResponse
 
 if __name__ == '__main__':
