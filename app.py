@@ -248,8 +248,6 @@ def processRequest(req):
 
         alexaResponse["response"]["outputSpeech"]["text"] = outText
         alexaResponse["response"]["reprompt"]["outputSpeech"]["text"] = outText
-
-        alexaResponse=json.dumps(alexaResponse)
         return alexaResponse
 
 if __name__ == '__main__':
